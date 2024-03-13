@@ -21,5 +21,5 @@ COPY --from=builder /tmp/acme-dns/acme-dns .
 
 VOLUME ["/etc/acme-dns", "/var/lib/acme-dns"]
 ENTRYPOINT ["./acme-dns"]
-EXPOSE 53 80 443
-EXPOSE 53/udp
+EXPOSE 5353 8080 8443
+EXPOSE 5353/udp
